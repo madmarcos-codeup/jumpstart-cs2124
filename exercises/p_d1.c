@@ -13,6 +13,21 @@
 */
 
 int main(void) {
+    // char aChar = 'a';
+    char str1[] = "hello";
+    char * str2 = "hello";
 
+    printf("string 1 address %p string val %s\n", str1, str1);
+    printf("string 2 ptr address %p, value of pointer %p string val %s\n", &str2, str2, str2);
+
+    str1[0] = 'J';
+    printf("string 1 address %p string val %s\n", str1, str1);
+
+    // str2[0] = 'J';
+    // printf("string 2 ptr address %p, value of pointer %p string val %s\n", &str2, str2, str2);
+
+    str2 = "world";
+    printf("string 2 ptr address %p, value of pointer %p string val %s\n", &str2, str2, str2);
+    
     return EXIT_SUCCESS;
 }

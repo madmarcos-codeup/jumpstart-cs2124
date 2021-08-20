@@ -11,7 +11,24 @@
 4. print it
 */
 
+void printPerson(Person * person) {
+    printf("Id: %d\nSSN: %s\n", person->id, person->ssn);
+    // person->id = 9999;
+}
+
 int main(void) {
+    Person bob = {42, "111-22-3333"};
+    // bob.id = 42;
+    // strcpy(bob.ssn, "111-22-3333");
+
+    printPerson(&bob);
+    
+    Person sue = bob;
+    sue.id = 99;
+    printPerson(&sue);
+
+    printf("Size of bob: %d\n", sizeof(bob));
+    printf("Size of sue: %d\n", sizeof(sue));
 
     return EXIT_SUCCESS;
 }
